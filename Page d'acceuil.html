@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil - Ademola Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Share Tech', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 180vh;
+        }
+
+        header {
+            background-color: #333;
+            width: 100%;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        .main-content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .main-content h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .cta-buttons a {
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Ajout de styles pour la section "Avis clients" */
+        .reviews {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .reviews h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .reviews p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        /* Ajout de styles pour la section "À propos" */
+        .about {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .about h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .about p {
+            font-size: 16px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Section produits */
+        .products {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product h4 {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .product .price {
+            font-size: 20px;
+            color: #007bff;
+            margin-top: 10px;
+        }
+
+        .product .btn-buy {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .product .btn-buy:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur Ademola Shop</h1>
+    </header>
+
+    <div class="main-content">
+        <h2>Découvrez nos iPhones et téléphones de qualité</h2>
+        <p>Nous vous proposons une sélection des meilleurs téléphones, y compris les derniers iPhones et bien plus encore. Trouvez le modèle parfait pour vous, avec des prix compétitifs.</p>
+
+        <div class="cta-buttons">
+            <a href="nos produits .html">Voir nos produits</a>
+            <a href="A propos.html">A propos</a>
+        </div>
+    </div>
+
+    <!-- Section produits -->
+    <div class="products">
+        <div class="product">
+            <img src="14 pro max.png" alt="iPhone 14 pro max">
+            <h4>iPhone 14</h4>
+            <p>Dernier modèle d'iPhone avec caméra avancée et écran OLED</p>
+            <a href="acheter-iphone-14.html" class="btn-buy">Acheter maintenant</a>
+        </div>
+        <div class="product">
+            <img src="13 pro max.png" alt="iPhone 13 pro max">
+            <h4>iPhone 13</h4>
+            <p>Un modèle performant avec une batterie longue durée</p>
+            <a href="acheter-iphone-13.html" class="btn-buy">Acheter maintenant</a>
+        </div>
+    </div>
+
+    <!-- Section Avis clients -->
+    <div class="reviews">
+        <h3>Avis des clients</h3>
+        <p><strong>Client 1:</strong> Excellent service, l'iPhone 14 est fantastique ! ⭐⭐⭐⭐⭐</p>
+        <p><strong>Client 2:</strong> Livraison rapide, mon Samsung Galaxy S21 fonctionne parfaitement ! ⭐⭐⭐⭐</p>
+    </div>
+
+    <!-- Section À propos -->
+    <div class="about">
+        <h3>À propos de Ademola Shop</h3>
+        <p>Ademola Shop est une boutique en ligne spécialisée dans la vente d'iPhones et d'autres téléphones mobiles de qualité. Nous offrons une large gamme de téléphones à des prix compétitifs, avec un service client exceptionnel et une livraison rapide.</p>
+    </div>
+
+    
+
+</body>
+</html>

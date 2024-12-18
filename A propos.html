@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos- Vente Informatique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Share Tech', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            width: 100%;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        .main-content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .main-content h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .cta-buttons a {
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Slider */
+        .product-slider {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .slider-container {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .slider-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .slider-container img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Avis clients */
+        .reviews {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .reviews h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .reviews p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        /* À propos */
+        .about {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .about h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .about p {
+            font-size: 16px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Formulaire de contact */
+        .contact-form {
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Offres spéciales */
+        .special-offers {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .offer-card {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 300px;
+            text-align: center;
+        }
+
+        .offer-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .offer-card h4 {
+            font-size: 18px;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .offer-card p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Partenaires */
+        .partners {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .partners-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .partners-logos img {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Filtres de recherche */
+        .filters {
+            margin-top: 50px;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .filters select,
+        .filters button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .filters button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .filters button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur notre Boutique Mohamed Shop</h1>
+    </header>
+
+    <div class="main-content">
+        <h2>Découvrez nos produits de qualité</h2>
+        <p>Nous vous proposons une large gamme d'ordinateurs, accessoires et composants informatiques à des prix compétitifs. Que vous soyez un professionnel ou un particulier, nous avons le produit qu'il vous faut.</p>
+
+        <div class="cta-buttons">
+            <a href="nos produits .html">Voir nos produits</a>
+            <a href="connexion .html">Se connecter</a>
+        </div>
+    </div>
+
+    <!-- Slider d'images de produits -->
+    <div class="product-slider">
+        <h3>Nos produits phares</h3>
+        <div class="slider-container">
+            <img src="https://example.com/product1.jpg" alt="Produit 1">
+            <img src="https://example.com/product2.jpg" alt="Produit 2">
+            <img src="https://example.com/product3.jpg" alt="Produit 3">
+        </div>
+    </div>
+
+    <!-- Section Avis clients -->
+    <div class="reviews">
+        <h3>Avis des clients</h3>
+        <p><strong>Client 1:</strong> Produit de qualité, j'adore mon ordinateur portable ! ⭐⭐⭐⭐⭐</p>
+        <p><strong>Client 2:</strong> Le clavier gaming est incroyable, je le recommande ! ⭐⭐⭐⭐</p>
+    </div>
+
+    <!-- Section À propos -->
+    <div class="about">
+        <h3>À propos de Ademola Shop</h3>
+        <p>Mohamed Shop est une boutique en ligne spécialisée dans la vente de produits technologiques de qualité. Nous offrons une large gamme d'ordinateurs, accessoires et composants à des prix compétitifs. Que vous soyez un professionnel ou un particulier, nous avons tout ce qu'il vous faut pour améliorer votre expérience informatique.</p>
+    </div>
+
+    <!-- Formulaire de contact -->
+    <div class="contact-form">
+        <h3>Contactez-nous</h3>
+        <form action="#" method="POST">
+            <input type="text" placeholder="Nom" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="4" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <!-- Offres spéciales -->
+    <div class="special-offers">
+        <h3>Offres spéciales</h3>
+        <div class="offer-card">
+            <img src="16.png" alt="Offre 1">
+            <h4>iPhone 16</h4>
+            <p>Prix réduit de 20%</p>
+            <a href="https://wa.me/22954606224?text=Je%20veux%20acheter%20un%20PC%20Gaming%20pour une reduction de 20%" class="cta-button">Profitez de l'offre</a>
+        </div>
+    </div>
+
+    <!-- Filtres de recherche -->
+    <div class="filters">
+        <h3>Filtres de recherche</h3>
+        <select>
+            <option>Catégorie</option>
+            <option>Téléphones</option>
+            <option>Accessoires</option>
+        </select>
+        <select>
+            <option>Prix</option>
+            <option>Moins de 500€</option>
+            <option>500€ - 1000€</option>
+            <option>Plus de 1000€</option>
+        </select>
+        <button>Filtrer</button>
+    </div>
+
+</body>
+</html>
